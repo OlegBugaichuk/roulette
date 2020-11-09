@@ -1,0 +1,37 @@
+{% load static %}
+
+<html>
+    <head>
+        <title> Рулетка </title>
+        <link rel="stylesheet" href="{% static 'core/css/index.css' %}">
+        <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+        <script src="{% static 'core/js/index.js' %}"></script>
+    </head>
+    <body>
+        <div class="wraper">
+            <div class="arrowup"></div>
+            <div class="arrowdown"></div>
+            <div class="window">
+                <ul class="list">
+                    
+                </ul>
+                <ul class="list">
+                    {% for item in items %}
+                        <li>
+                            <img src="{{ item.image.url }}" alt="{{ item.title }}">
+                            <span class="li-span">{{ item.number }}</span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <p style="text-align: center">
+            <button class="button">Кнопка</button>
+        </p>
+        <div class="win">
+            <ul>
+                
+            </ul>
+        </div>
+    </body>
+</html>
