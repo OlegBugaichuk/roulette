@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    for (i = 0; i < 3; i++) {
+    for (i = 0; i < 5; i++) {
         $(".list li").clone().appendTo(".list");
     }
     $('.button').click(function () {
@@ -14,7 +14,7 @@ $(document).ready(function () {
         }
         var x = selfRandom(20, 100);
         $('.window').animate({
-            right: ((x*130)+(x*8-12)-119)
-        }, 1000);
+            right: ((x*130)+(x*3-12)-119)
+        }, 5000);
     });
 });
